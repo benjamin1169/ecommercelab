@@ -92,6 +92,7 @@ class Product extends db_connection{
 		return $this->fetchOne("SELECT * FROM categories WHERE cat_id='$categoryid'");
 	}
 
+    //SEARCH PRODUCT 
 	 function search_select_product($query){
 	 	return $this->fetch("select * from products where (`product_title` like '".$query."%') ");
 	 }

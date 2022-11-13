@@ -30,7 +30,7 @@ $products = search_product_controller($_GET['search']);
        <form method="post" action="../actions/searchprocess.php">
 
         <input type="text" class="form-control mb-0" id="search" name="search" placeholder="Type here to search" style="width: 400px; margin-left: 250px">
-        <button style="margin-left: -50px" class="btn btn-primary float-right" type="submit" name="searchButton">Search</button>
+        <button style="margin-left: -50px" class="btn btn-primary float-right" type="submit" name="searchbutton">Search</button>
 
 </form>
 

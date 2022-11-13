@@ -77,6 +77,17 @@ class db_connection{
 		return false;
 	}
 
+	function final_index($query){
+		// if query executes successfully
+		if($this->query($query)) {
+			// return one row
+			return  mysqli_insert_id($this->db);
+		}
+		// else return false
+		return false;
+	}
+
+
 
 }
 

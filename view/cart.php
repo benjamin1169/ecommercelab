@@ -1,6 +1,6 @@
 <?php
 
-require('../Controllers/cart_controller.php');
+require('../controllers/cart_controller.php');
 // return array of all rows, or false (if it failed)
 $cart = select_all_cart_controller();
 
@@ -31,7 +31,7 @@ $cart = select_all_cart_controller();
 
 <header style="display: flex; margin-top: 10px; color: black;">
     <div>
-    <form method="post" action="../Actions/searchprocess.php" style='display: flex'>
+    <form method="post" action="../actions/cartprocess.php" style='display: flex'>
 
         <input type="text" class="form-control mb-0" id="search" name="search" placeholder="Type here to search" style="width: 400px; margin-left: 200px">
         <button style="margin-left: -50px" class="btn btn-primary float-right" type="submit" name="searchButton">Search</button>
@@ -41,7 +41,9 @@ $cart = select_all_cart_controller();
     
     <a href="../admin/brand.php"><h3 style="color:black; margin-left: 200px;">Brand</h3></a>
     <a href="../admin/category.php"><h3 style="color:black; margin-left: 40px;">Category</p></h3>
-    <a href="../view/productadded.php"><h3 style="color:black; margin-left: 40px;">Product</p></h3>
+    <a href="../view/productadded.php"><h3 style="color:black; margin-left: 40px;">Add Product</p></h3>
+    <a href="../admin/productaddandedit.php"><h3 style="color:black; margin-left: 40px;">Edit Product</p></h3>
+    <a href="../view/viewallproduct.php"><h3 style="color:#090a; margin-left: 40px;">Products</p></h3>
     <a href="../view/cart.php"><h3 style="color: black; margin-left:40px;">Cart</h3></a>
     
     
@@ -54,7 +56,7 @@ $cart = select_all_cart_controller();
         echo 
         "
         
-        <a href='./singleview.php?id={$x['product_id']}'>
+        <a href='./viewoneproduct.php?id={$x['product_id']}'>
         <div class='card' style='width: 33rem; margin-bottom: 20px; margin-left: 430px;'>
             <div class='card-body' style='display: flex;'>
             <img style='height: 200px; width: 200px' src='{$x['product_image']}' alt='Card image cap'>

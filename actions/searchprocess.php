@@ -8,9 +8,13 @@ if(isset($_POST['searchbutton'])){
 
     // $result = search_product_controller();
 
-
-    header("Location: ../View/product_search.php?search=$search");
-   
+    header("Location: ../view/product_search.php?search=$search");
 
 }
+
+else{
+    echo "Unable to search";
+}
+    
+
 ?>

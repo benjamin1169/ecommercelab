@@ -24,7 +24,11 @@ require('../controllers/product_controller.php');
         <a href="../admin/category.php">Category</a>
         <a href="../admin/productaddandedit.php">Product</a> -->
         <!-- <a href="../View/cartView.php">Cart</a> -->
+
+<header>Add Products</header>
 </header>
+
+
 
     <form action="../actions/productadd.php" method="POST" id="productaddform" enctype="multipart/form-data">
             <label for="brand">Product Brand</label><br>

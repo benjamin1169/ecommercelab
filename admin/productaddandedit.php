@@ -30,10 +30,10 @@ $category = select_all_cat_controller();
 <body>
     <!-- <header style="display: flex; margin-top: 20px; " >
        
-        <a href="../Admin/brand_add_edit.php"><h4 style="color:black; margin-left: 900px;">Brand</h4></a>
-        <a href="../Admin/cat_add_edit.php"><h4 style="color:black; margin-left: 40px;">Category</h4></a>
-        <a href="../Admin/prod_add_edit.php"><h4 style="color:black; margin-left: 40px;">Product</h4></a>
-        <a href="../View/cartView.php"><h4 style="color: black; margin-left:40px;">Cart</h4></a>
+        <a href="../admin/brand.php"><h4 style="color:black; margin-left: 900px;">Brand</h4></a>
+        <a href="../admin/category.php"><h4 style="color:black; margin-left: 40px;">Category</h4></a>
+        <a href="../admin/productaddandedit.php"><h4 style="color:black; margin-left: 40px;">Product</h4></a>
+        <a href="../view/cart.php"><h4 style="color: black; margin-left:40px;">Cart</h4></a>
 
     </header> -->
 
