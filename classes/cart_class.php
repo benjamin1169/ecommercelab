@@ -18,5 +18,55 @@ class Cart extends db_connection{
         // return array or false
         return $this->fetchOne("SELECT * FROM `cart` left join products on p_id = product_id");
     }
-}
 
+
+    function remove_one_cart($id, $ip){
+        // return array or false
+        return $this->query("DELETE FROM cart WHERE p_id =  '$id' and ip_add = '$ip' ");
+    }
+
+    function get_qty($id){
+
+        return $this->fetchOne("SELECT * FROM cart WHERE p_id = '$id' ");
+
+    }
+
+    function get_quantity($id, $qty){
+
+        return $this->query("UPDATE cart set qty='$qty' WHERE p_id = '$id' ");
+
+    }
+
+    function get_total($id){
+        return $this->fetch("SELECT SUM(qty * product_price) as sum FROM cart inner join products on p_id = product_id WHERE c_id = '$id'");
+    }
+
+    function add_order_class($cus_id, $invoice_number, $date, $status){
+
+        return $this->final_index("insert into orders (customer_id, invoice_no, order_date, order_status) values('$cus_id', '$invoice_number', '$date', '$status')");
+        
+    }
+
+    function get_cus_info_class($cus_id){
+        return $this->fetch("select * from cart where c_id = '$cus_id' ");
+
+    }
+
+    function add_order_details_class($order_id, $product_id, $quantity){
+
+        return $this->query("insert into orderdetails (order_id, product_id, qty) values ('$order_id',  '$product_id', '$quantity')  ");
+
+    }
+
+    function add_payment_class($cus_id, $order_id, $amount, $currency, $date){
+
+        return $this->query("insert into payment (amt, customer_id, order_id, currency, payment_date) values ('$amount',  '$cus_id', '$order_id', '$currency', '$date' )  ");
+
+    }
+
+    function delete_class($cus_id){
+
+        return $this->query("delete from cart where c_id = '$cus_id' ");
+
+    }
+}

@@ -23,4 +23,8 @@ if(isset($_GET['logout']) && $_GET['logout'] == 'true'){
     header('location: ../');
 }
 
+if(isset($_SESSION["Cart_total"])){
+	return $_SESSION["Cart_total"];
+}
+
 ?>
