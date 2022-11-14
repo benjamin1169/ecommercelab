@@ -39,7 +39,8 @@ $searchcategory = select_one_cat($category);
         <a href="../admin/brand.php"><h3 style="color:#090a; margin-left: 200px;">Brand</h3></a>
         <a href="../admin/category.php"><h3 style="color:#090a; margin-left: 40px;">Category</h3></a>
         <a href="../admin/product.php"><h3 style="color:#090a; margin-left: 40px;">Product</h3></a>
-        <a href="../admin/productaddandedit.php"><h3 style="color:#090a; margin-left: 40px;">Add Product</h3></a>
+        <a href="../admin/productaddandedit.php"><h3 style="color:#090a; margin-left: 40px;">Edit Product</h3></a>
+        <a href="../view/viewallproduct.php"><h3 style="color:#090a; margin-left: 40px;">Products</p></h3>
         <a href="../view/cart.php"><h3 style="color:#090a; margin-left: 40px;">Cart</p></h3>
 
 
