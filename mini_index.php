@@ -20,7 +20,7 @@ require('./Settings/core.php');
 </head>
 <body>
  
-    <br>
+    
 <div class="introSteps" style="margin-left: 280px; margin-top: 250px;">
     <h1 style="color: #fd7e14; font-size: 70px; "><em>Welcome to Benjamin's E-commerce Labs</em></h1>
 

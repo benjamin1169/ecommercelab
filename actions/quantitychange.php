@@ -17,7 +17,7 @@ if(isset($_POST['Updatebutton'])){
     $result = update_quantity($id, $qty);
 
     if($result === true){
-        header('Location: ../view/cartview.php');
+        header('Location: ../view/cart.php');
     }else{
         echo " failed";
     }

@@ -64,7 +64,7 @@ $cart = select_all_cart_controller();
                 <h5 style='color: black;' class='card-title'>{$x['product_title']}</h5>
                 <h6 class='card-subtitle mb-2 text-muted'>{$x['product_price']}</h6>
                 <p style='color: grey;' class='card-text'>{$x['product_desc']}</p>
-                <a href='' class='btn btn-primary'>Manage Cart</a>
+                <a href='./view/viewcart.php' class='btn btn-primary'>Manage Cart</a>
             </div>
             </div>
             

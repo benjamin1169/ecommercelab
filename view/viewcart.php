@@ -76,8 +76,8 @@ $_SESSION["Cart_total"] = $get_tot;
                 <h6 class='card-subtitle mb-2 text-muted'>{$x['product_price']}</h6>
                 <p style='color: grey;' class='card-text'>{$x['product_desc']}</p>
                 <br>
-                <a href='../actions/manage_quantity_cart.php?id={$x['product_id']}' class='btn btn-primary'>Manage Quantity</a>
-                <a href='../actions/remove_from_cart.php?id={$x['product_id']}' class='btn btn-primary' style='width: 130px; height: 38px;'>Delete Cart</a>
+                <a href='../actions/managecartquantity.php?id={$x['product_id']}' class='btn btn-primary'>Manage Quantity</a>
+                <a href='../actions/removefromcart.php?id={$x['product_id']}' class='btn btn-primary' style='width: 130px; height: 38px;'>Delete Cart</a>
             </div>
             </div>
             
