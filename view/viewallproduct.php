@@ -15,9 +15,9 @@ $product = select_all_product_controller();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS
     <link rel="stylesheet" href="../CSS/bootstrap1.css">
-    <!-- Style CSS -->
+    <!- Style CSS -->
     <link rel="stylesheet" href="../CSS/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="../CSS/responsive.css">
@@ -28,12 +28,12 @@ $product = select_all_product_controller();
 <body style=' margin-bottom: 20px'>
 
 <header style="display: flex; margin-top: 10px; color: black;">
-    <a href="../index.php"><h3 style="color:#6f42c1;">Home</h3></a>
+    <a href="../mini_index.php"><h3 style="color:#dc3545;">Home</h3></a>
     <div>
     <form method="post" action="../actions/searchprocess.php" style='display: flex'>
 
         <input type="text" class="form-control mb-0" id="search" name="search" placeholder="Type here to search" style="width: 400px; margin-left: 250px">
-        <button style="margin-left: -50px" class="btn btn-primary float-right" type="submit" name="searchButton">Search</button>
+        <button style="margin-left: -50px" class="btn btn-primary float-right" type="submit" name="searchbutton">Search</button>
 
     </form>
     </div>
@@ -78,3 +78,4 @@ $product = select_all_product_controller();
 
 </body>
 </html>
+

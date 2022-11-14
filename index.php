@@ -21,9 +21,8 @@ if(!isset($_SESSION)){
             <a style="font-size: 1.5rem;" href="view/login.php">Login</a>
             <a style="font-size: 1.5rem;" href="view/user_form.php">Signup</a>
             <?php if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 1) { ?>
-                <a style="font-size: 1.5rem;" href="admin/brand.php">Admin</a>
-                <a style="font-size: 1.5rem;" href="admin/category.php">Admin</a>
-                <a style="font-size: 1.5rem;" href="admin/productaddandedit.php">Admin</a>
+                <a style="font-size: 1.5rem;" href="mini_index.php">Admin</a>
+                
 
                 <?php } ?>
             <?php if(isset($_SESSION['user_role'])) { ?>
@@ -34,3 +33,6 @@ if(!isset($_SESSION)){
         </div>        
 </body>
 </html>
+
+
+

@@ -43,30 +43,30 @@ class Cart extends db_connection{
 
     function add_order_class($cus_id, $invoice_number, $date, $status){
 
-        return $this->final_index("insert into orders (customer_id, invoice_no, order_date, order_status) values('$cus_id', '$invoice_number', '$date', '$status')");
+        return $this->final_index("INSERT into orders (customer_id, invoice_no, order_date, order_status) VALUES ('$cus_id', '$invoice_number', '$date', '$status')");
         
     }
 
     function get_cus_info_class($cus_id){
-        return $this->fetch("select * from cart where c_id = '$cus_id' ");
+        return $this->fetch("SELECT * FROM cart WHERE c_id = '$cus_id' ");
 
     }
 
     function add_order_details_class($order_id, $product_id, $quantity){
 
-        return $this->query("insert into orderdetails (order_id, product_id, qty) values ('$order_id',  '$product_id', '$quantity')  ");
+        return $this->query("INSERT into orderdetails (order_id, product_id, qty) VALUES ('$order_id',  '$product_id', '$quantity')  ");
 
     }
 
     function add_payment_class($cus_id, $order_id, $amount, $currency, $date){
 
-        return $this->query("insert into payment (amt, customer_id, order_id, currency, payment_date) values ('$amount',  '$cus_id', '$order_id', '$currency', '$date' )  ");
+        return $this->query("INSERT into payment (amt, customer_id, order_id, currency, payment_date)  VALUES ('$amount',  '$cus_id', '$order_id', '$currency', '$date' )  ");
 
     }
 
     function delete_class($cus_id){
 
-        return $this->query("delete from cart where c_id = '$cus_id' ");
+        return $this->query("DELETE from cart WHERE c_id = '$cus_id' ");
 
     }
 }

@@ -94,7 +94,7 @@ class Product extends db_connection{
 
     //SEARCH PRODUCT 
 	 function search_select_product($query){
-	 	return $this->fetch("select * from products where (`product_title` like '".$query."%') ");
+	 	return $this->fetch("SELECT * FROM products WHERE (`product_title` like '".$query."%') ");
 	 }
 }
 

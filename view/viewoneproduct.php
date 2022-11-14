@@ -29,25 +29,25 @@ $searchcategory = select_one_cat($category);
 </head>
 <body>
     <header style="display: flex; margin-top: 20px;">
+    <a href="../mini_index.php"><h3 style="color:#dc3545;">Home</h3></a>
        <form method="post" action="../actions/searchprocess.php" style='display: flex'>
 
         <input type="text" class="form-control mb-0" id="search" name="search" placeholder="Type here to search" style="width: 400px; margin-left: 200px">
-        <button style="margin-left: -50px" class="btn btn-primary float-right" type="submit" name="searchButton">Search</button>
+        <button style="margin-left: -50px" class="btn btn-primary float-right" type="submit" name="searchbutton">Search</button>
 
         </form>
 
         <a href="../admin/brand.php"><h3 style="color:#090a; margin-left: 200px;">Brand</h3></a>
         <a href="../admin/category.php"><h3 style="color:#090a; margin-left: 40px;">Category</h3></a>
-        <a href="../admin/product.php"><h3 style="color:#090a; margin-left: 40px;">Product</h3></a>
-        <a href="../admin/productaddandedit.php"><h3 style="color:#090a; margin-left: 40px;">Add Product</h3></a>
-        <a href="../view/viewallproduct.php"><h3 style="color:#090a; margin-left: 40px;">Products</p></h3>
+        <a href="../admin/product.php"><h3 style="color:#090a; margin-left: 40px;">Add Product</h3></a>
+        <a href="../admin/productaddandedit.php"><h3 style="color:#090a; margin-left: 40px;">Edit Product</h3></a>
         <a href="../view/cart.php"><h3 style="color:#090a; margin-left: 40px;">Cart</p></h3>
 
 
     </header>
 
 
-        <div class='singleproduct' style='display: flex; margin-top: 200px; margin-left: 450px;'>
+        <div class='viewoneproduct' style='display: flex; margin-top: 200px; margin-left: 450px;'>
         <!-- <form method = POST action="viewallproduct.php" -->
             <div class='image'>
             <img style='height: 400px; width: 400px' src="<?php echo $product['product_image'] ?>" alt="">
@@ -71,6 +71,6 @@ $searchcategory = select_one_cat($category);
         
 
 
-    
+
 </body>
 </html>

@@ -32,7 +32,7 @@ require('../settings/core.php');
         }
  
     }else{
-        header("Location: ../Register/signIn.php");
+        header("Location: ../register/signIn.php");
     } 
 
     // $results = password_verify($password, $result['customer_pass']);

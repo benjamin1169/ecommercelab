@@ -36,7 +36,7 @@ function get_quantity($id){
     return $cart_install->get_qty($id);
 }
 
-function update_qty($id, $qty){
+function update_quantity($id, $qty){
     $cart_install = new Cart();
     // call the method from the class
     return $cart_install->get_quantity($id, $qty);
