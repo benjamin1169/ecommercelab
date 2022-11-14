@@ -42,6 +42,7 @@ $product = select_all_product_controller();
     <a href="../admin/category.php"><h3 style="color:#090a; margin-left: 40px;">Category</p></h3>
     <a href="../view/productadd.php"><h3 style="color:#090a; margin-left: 40px;">Add Products</p></h3>
     <a href="../admin/productaddandedit.php"><h3 style="color:black; margin-left: 40px;">Edit Product</p></h3>
+    <a href="../view/viewallproduct.php"><h3 style="color:#090a; margin-left: 40px;">Products</p></h3>
     <a href="../view/cart.php"><h3 style="color: #6742c1; margin-left:40px;">Cart</h3></a>
     
     
