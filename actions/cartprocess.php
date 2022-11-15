@@ -18,9 +18,9 @@ if(isset($_GET['id'])){
     $result = add_customer_cart_controller($id, $ipaddress, $customerid, $quantity);
     
     if($result === true){
-        header('Location: ../view/cart.php');
+        header('Location: ../view/viewcart.php');
     }else{
-        echo "failed";
+        echo "failed to drop in cart";
     }
     
     

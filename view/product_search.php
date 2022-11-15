@@ -48,8 +48,8 @@ $products = search_product_controller($_GET['search']);
         <h6 class='card-subtitle mb-2 text-muted'>{$x['product_price']}</h6>
         <p style='color: grey;' class='card-text'>{$x['product_desc']}</p>
 
-        <a href='addtocart.php?id={$x['product_id']}' class='btn btn-primary'>Add to Cart</a>
-        <a href='#' class='btn btn-primary'>Manage Cart</a>
+        <a href='../actions/cartprocess.php?id={$x['product_id']}' class='btn btn-primary'>Add to Cart</a>
+        <a href='../actions/managecartquantity.php?id={$x['product_id']}' class='btn btn-primary'>Manage Quantity</a>
         </div>
         
     </div>
@@ -59,4 +59,4 @@ $products = search_product_controller($_GET['search']);
 
     
 </body>
-</html> -->
+</html> 

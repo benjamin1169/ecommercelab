@@ -20,6 +20,7 @@ if(!isset($_SESSION)){
             <h1 style="font-size: 5rem;">Hello <?php if(isset($_SESSION['user_name'])){ echo $_SESSION['user_name']; } else {echo 'user'; }?>, Welcome to our Online Store!</h1>
             <a style="font-size: 1.5rem;" href="view/login.php">Login</a>
             <a style="font-size: 1.5rem;" href="view/user_form.php">Signup</a>
+            <a style="font-size: 1.5rem;" href="view/user_form.php">Signup</a>
             <?php if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 1) { ?>
                 <a style="font-size: 1.5rem;" href="mini_index.php">Admin</a>
                 

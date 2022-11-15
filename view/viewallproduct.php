@@ -37,13 +37,12 @@ $product = select_all_product_controller();
 
     </form>
     </div>
-    
-    <a href="../admin/brand.php"><h3 style="color:#090a; margin-left: 150px;">Brand</h3></a>
-    <a href="../admin/category.php"><h3 style="color:#090a; margin-left: 40px;">Category</p></h3>
-    <a href="../view/productadd.php"><h3 style="color:#090a; margin-left: 40px;">Add Products</p></h3>
+
+    <a href="../admin/brand.php"><h3 style="color:black; margin-left: 200px;">Brand</h3></a>
+    <a href="../admin/category.php"><h3 style="color:black; margin-left: 40px;">Category</p></h3>
+    <a href="../view/productadded.php"><h3 style="color:black; margin-left: 40px;">Add Product</p></h3>
     <a href="../admin/productaddandedit.php"><h3 style="color:black; margin-left: 40px;">Edit Product</p></h3>
-    <a href="../view/viewallproduct.php"><h3 style="color:#090a; margin-left: 40px;">Products</p></h3>
-    <a href="../view/cart.php"><h3 style="color: #6742c1; margin-left:40px;">Cart</h3></a>
+    <a href="../view/viewcart.php"><h3 style="color: black; margin-left:40px;">Cart</h3></a>
     
     
 </header>
@@ -63,7 +62,8 @@ $product = select_all_product_controller();
             <p style='color: grey;' class='card-text'>{$x['product_desc']}</p>
 
             <a href='../actions/cartprocess.php?id={$x['product_id']}' class='btn btn-primary'>Add to Cart</a>
-            <a href='' class='btn btn-primary'>Manage Cart</a>
+            <a href='../actions/managecartquantity.php?id={$x['product_id']}' class='btn btn-primary'>Manage Quantity</a>
+         
             </div>
             
         </div>

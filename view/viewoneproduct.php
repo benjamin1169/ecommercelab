@@ -30,20 +30,20 @@ $searchcategory = select_one_cat($category);
 <body>
     <header style="display: flex; margin-top: 20px;">
     <a href="../mini_index.php"><h3 style="color:#dc3545;">Home</h3></a>
+    <div>
        <form method="post" action="../actions/searchprocess.php" style='display: flex'>
 
         <input type="text" class="form-control mb-0" id="search" name="search" placeholder="Type here to search" style="width: 400px; margin-left: 200px">
         <button style="margin-left: -50px" class="btn btn-primary float-right" type="submit" name="searchbutton">Search</button>
 
         </form>
+</div>
 
-        <a href="../admin/brand.php"><h3 style="color:#090a; margin-left: 200px;">Brand</h3></a>
-        <a href="../admin/category.php"><h3 style="color:#090a; margin-left: 40px;">Category</h3></a>
-        <a href="../admin/product.php"><h3 style="color:#090a; margin-left: 40px;">Add Product</h3></a>
-        <a href="../admin/productaddandedit.php"><h3 style="color:#090a; margin-left: 40px;">Edit Product</h3></a>
-        <a href="../view/cart.php"><h3 style="color:#090a; margin-left: 40px;">Cart</p></h3>
-
-
+        <a href="../admin/brand.php"><h3 style="color:black; margin-left: 200px;">Brand</h3></a>
+        <a href="../admin/category.php"><h3 style="color:black; margin-left: 40px;">Category</p></h3>
+        <a href="../view/productadded.php"><h3 style="color:black; margin-left: 40px;">Add Product</p></h3>
+        <a href="../admin/productaddandedit.php"><h3 style="color:black; margin-left: 40px;">Edit Product</p></h3>
+        <a href="../view/viewcart.php"><h3 style="color: black; margin-left:40px;">Cart</h3></a>
     </header>
 
 

@@ -25,8 +25,8 @@ require('./Settings/core.php');
     <h1 style="color: #fd7e14; font-size: 70px; "><em>Welcome to Benjamin's E-commerce Labs</em></h1>
 
     <div class="links" style=" text-decoration: none;">
-        <button style="font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 150px; height: 80px; margin-right: 50px; margin-left: 250px;"><a style="text-decoration: none; color: white;" href="./view/login.php">Login</a></button>
-        <button style="font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 150px; height: 80px; "><a style="color: white; text-decoration: none;" href="./view/user_form.php">Register</a></button>
+        <button type="submit" style="font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 150px; height: 80px; margin-right: 50px; margin-left: 250px;"><a style="text-decoration: none; color: white;" href="./view/login.php">Login</a></button>
+        <button type="submit" style="font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 150px; height: 80px; "><a style="color: white; text-decoration: none;" href="./view/user_form.php">Register</a></button>
 
         <?php
         if(isset($_SESSION["user_role"])){
@@ -36,14 +36,14 @@ require('./Settings/core.php');
                 <br>
                 <br>
                 <br>
-                <button input='submit' value='submit'style='font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 200px; height: 80px; margin-right: 50px; margin-left: 250px;'><a style='text-decoration: none; color: white;' href='./admin/brand.php'>Brand</a></button>
-                <button input='submit' value='submit'style='font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 200px; height: 80px; '><a style='color: white; text-decoration: none;' href='./admin/category.php'>Category</a></button>
+                <button type='submit' style='font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 200px; height: 80px; margin-right: 50px; margin-left: 250px;'><a style='text-decoration: none; color: white;' href='./admin/brand.php'>Brand</a></button>
+                <button type='submit' style='font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 200px; height: 80px; '><a style='color: white; text-decoration: none;' href='./admin/category.php'>Category</a></button>
                 <br>
                 <br>
                 <br>
-                <button style='font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 150px; height: 80px; margin-right: 50px; margin-left: 250px;'><a style='text-decoration: none; color: white;' href='../admin/product.php'>Product</a></button>
+                <button style='font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 150px; height: 80px; margin-right: 50px; margin-left: 250px;'><a style='text-decoration: none; color: white;' href='../admin/productadd.php'>Add Product</a></button>
                 <button style='font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 150px; height: 80px; margin-right: 50px; margin-left: 250px;'><a style='text-decoration: none; color: white;' href='../admin/productaddandedit.php'>Edit Product</a></button>
-                <button style='font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 150px; height: 80px; '><a style='color: white; text-decoration: none;' href='./view/cart.php'>Cart</a></button>
+                <button style='font-size: medium; border-radius: 8px; border: 10px solid transparent; background-color: #fd7e14; width: 150px; height: 80px; '><a style='color: white; text-decoration: none;' href='../view/cart.php'>Cart</a></button>
                 
                 ";
             }
@@ -63,3 +63,27 @@ require('./Settings/core.php');
 
 </body>
 </html>
+
+
+
+<body>
+        <div
+            style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 90vh; max-height: 90vh;">
+            <h1 style="font-size: 5rem;">Hello <?php if(isset($_SESSION['user_name'])){ echo $_SESSION['user_name']; } else {echo 'user'; }?>, Welcome to our Online Store!</h1>
+            <a style="font-size: 1.5rem;" href="view/login.php">Login</a>
+            <a style="font-size: 1.5rem;" href="view/user_form.php">Signup</a>
+            <a style="font-size: 1.5rem;" href="view/user_form.php">Signup</a>
+            <?php if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 1) { ?>
+                <a style="font-size: 1.5rem;" href="mini_index.php">Admin</a>
+                
+
+                <?php } ?>
+            <?php if(isset($_SESSION['user_role'])) { ?>
+
+            <a style="font-size: 1.5rem;" href="settings/core.php?logout=true">Logout</a>
+                <?php } ?>
+            
+        </div>        
+</body>
+</html>
+

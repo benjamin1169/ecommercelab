@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('../Controllers/cart_controller.php');
+require('../controllers/cart_controller.php');
 // return array of all rows, or false (if it failed)
 $cart = select_all_cart_controller();
 
@@ -51,23 +51,23 @@ $_SESSION["Cart_total"] = $get_tot;
     
     <a href="../admin/brand.php"><h3 style="color:black; margin-left: 200px;">Brand</h3></a>
     <a href="../admin/category.php"><h3 style="color:black; margin-left: 40px;">Category</p></h3>
-    <a href="../admin/product.php"><h3 style="color:black; margin-left: 40px;">Add Product</p></h3>
-    <a href="../admin/productaddandedit.php"><h3 style="color:black; margin-left: 40px;">EditProduct</p></h3>
-    <a href="../view/cart.php"><h3 style="color: black; margin-left:40px;">Cart</h3></a>
+    <a href="../view/productadded.php"><h3 style="color:black; margin-left: 40px;">Add Product</p></h3>
+    <a href="../admin/productaddandedit.php"><h3 style="color:black; margin-left: 40px;">Edit Product</p></h3>
+    <a href="../view/viewcart.php"><h3 style="color: black; margin-left:40px;">Cart</h3></a>
     
     
 </header>
 
 <h1 style='margin-top: 60px; margin-left: 600px; color: #6f42c1'>Cart List</h1>
 <h4 style='margin-top: 20px; margin-left: 1070px; color: #6f42c1'>GHC: <?php echo $_SESSION["Cart_total"];    ?></h4>
-<a href="./payment.php" style="margin-left:1070px; color: black">Click here to proceed to payment</a>
+<a href="./payment_form.php" style="margin-left:1070px; color: black">Click here to proceed to payment</a>
 
 <?php
     foreach($cart as $x){
         echo 
         "
         
-        <a href='./singleview.php?id={$x['product_id']}'>
+        <a href='./viewoneproduct.php?id={$x['product_id']}'>
         <div class='card' style='width: 35rem; margin-bottom: 20px; margin-left: 430px;'>
             <div class='card-body' style='display: flex;'>
             <img style='height: 200px; width: 200px' src='{$x['product_image']}' alt='Card image cap'>
@@ -77,7 +77,7 @@ $_SESSION["Cart_total"] = $get_tot;
                 <p style='color: grey;' class='card-text'>{$x['product_desc']}</p>
                 <br>
                 <a href='../actions/managecartquantity.php?id={$x['product_id']}' class='btn btn-primary'>Manage Quantity</a>
-                <a href='../actions/removefromcart.php?id={$x['product_id']}' class='btn btn-primary' style='width: 130px; height: 38px;'>Delete Cart</a>
+                <a href='../actions/removefromcart.php?id={$x['product_id']}' class='btn btn-primary' style='width: 130px; height: 38px;'>Remove</a>
             </div>
             </div>
             
